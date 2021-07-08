@@ -44,11 +44,14 @@ public:
 };
 
 int main() {
-    ProductBase *producta = SimpleFactory::CREATE_PRODUCT("a");
-    ProductBase *productb = SimpleFactory::CREATE_PRODUCT("b");
+    ProductBase *product = SimpleFactory::CREATE_PRODUCT("a");
+    product->call();
+    delete product;
 
-    producta->call();
-    productb->call();
+    product = SimpleFactory::CREATE_PRODUCT("b");
+    product->call();
+    delete product;
+
     getchar();
     return 0;
 }

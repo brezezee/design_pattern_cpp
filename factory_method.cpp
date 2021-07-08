@@ -60,18 +60,19 @@ public:
     }
 };
 
+void client(Factory* factory) {
+    Product *product = factory->CreateProduct();
+    product->call();
+    delete product;
+}
 
 int main() {
     Factory *factory1 = new ConcreteFactory1();
-    Product *product = factory1->CreateProduct();
-    product->call();
-    delete product;
+    client(factory1);
     delete factory1;
     
     Factory *factory2 = new ConcreteFactory2();
-    product = factory2->CreateProduct();
-    product->call();
-    delete product;
+    client(factory2);
     delete factory2;
 
     getchar();

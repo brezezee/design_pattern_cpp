@@ -1,3 +1,5 @@
-# design_pattern_cpp
+## design_pattern_cpp
 
-参考WIKI
+为了使单一模式的结构清晰，并未将定义与实现分离，且测试直接在实现文件中。
+
+一些笔记见WIKI。

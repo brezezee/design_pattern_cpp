@@ -18,6 +18,7 @@ public:
     }
 };
 
+// 对于没有多重继承的语言，需要在Adapter中保存被适配的对象(Html)，且同时只能适配一个。
 class Adapter : public Server, private Html {
 public:
     void Request() override {
